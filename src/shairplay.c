@@ -337,7 +337,7 @@ main(int argc, char *argv[])
 	if (device == NULL) {
 		fprintf(stderr, "Error opening audio device %d\n", errno);
 		fprintf(stderr, "Please check your libao settings and try again\n");
-		return -1;
+		//return -1;
 	} else {
 		ao_close(device);
 		device = NULL;
