@@ -263,6 +263,9 @@ dnssd_register_raop(dnssd_t *dnssd, const char *name, unsigned short port, const
 	strncat(servname, "@", sizeof(servname)-strlen(servname)-1);
 	strncat(servname, name, sizeof(servname)-strlen(servname)-1);
 
+
+    printf("dnssd->raopService is %d\r\n",dnssd->raopService);
+
 	/* Register the service */
 	dnssd->DNSServiceRegister(&dnssd->raopService, 0, 0,
 	                          servname, "_raop._tcp",
